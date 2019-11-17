@@ -67,7 +67,7 @@ var appData = {
 
     showHover: true,
     showClickResult: true,
-    showClickAnimation: true,
+    showClickAnimation: false,
     showTrace: true,
     soundOnTap: true,
     showCenterDot: false,
