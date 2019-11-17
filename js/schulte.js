@@ -1,4 +1,5 @@
 var x = document.getElementById("clickAudio"); 
+var wrongX = document.getElementById("wrongClickAudio"); 
 
 function Cell(number) {
     this.number = number;
@@ -268,7 +269,9 @@ vueApp = new Vue({
             if (this.clickIndex >= 0 && this.clickIndex < this.cells.length) {
                 if (this.isCellCorrect(this.clickIndex)) {
                     this.stats.correctClicks ++;
-                    x.play(); 
+                    if (this.soundOnTap) {
+                      x.play(); 
+                    }
                     this.stats.addClick(this.currGroup, this.cells[this.clickIndex].number, false, this.groups[this.currGroup].inverted, this.groups[this.currGroup].divergent);
                     this.cells[this.clickIndex].traced = true;
                     if (this.shuffleSymbols) {
@@ -295,6 +298,9 @@ vueApp = new Vue({
                     }
                 } else {
                     this.stats.wrongClicks ++;
+                    if (this.soundOnTap) {
+                      wrongX.play();
+                    }
                     this.stats.addClick(this.currGroup, this.cells[this.clickIndex].number, true, this.groups[this.currGroup].inverted, this.groups[this.currGroup].divergent);
                     this.correctIndex = -1;
                 }
