@@ -1,3 +1,5 @@
+var x = document.getElementById("clickAudio"); 
+
 function Cell(number) {
     this.number = number;
     this.symbol = number;
@@ -266,7 +268,6 @@ vueApp = new Vue({
             if (this.clickIndex >= 0 && this.clickIndex < this.cells.length) {
                 if (this.isCellCorrect(this.clickIndex)) {
                     this.stats.correctClicks ++;
-                    var x = document.getElementById("clickAudio"); 
                     x.play(); 
                     this.stats.addClick(this.currGroup, this.cells[this.clickIndex].number, false, this.groups[this.currGroup].inverted, this.groups[this.currGroup].divergent);
                     this.cells[this.clickIndex].traced = true;
