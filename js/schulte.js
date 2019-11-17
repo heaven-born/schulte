@@ -66,6 +66,7 @@ var appData = {
     showClickResult: true,
     showClickAnimation: true,
     showTrace: true,
+    soundOnTap: true,
     showCenterDot: false,
     show69Dot: false,
     shuffleSymbols: false,
@@ -548,17 +549,6 @@ vueApp = new Vue({
             }
         },
         update69Dots: function () {
-            for (var i = 0; i < this.cells.length; i++) {
-                if (this.cells[i].number == 6 || this.cells[i].number == 9) {
-                    if (this.show69Dot) {
-                        this.cells[i].symbol = this.cells[i].number + '.';
-                    } else {
-                        this.cells[i].symbol = this.cells[i].number;
-                    }
-                }
-            }
-        },
-        soundOnTap: function () {
             for (var i = 0; i < this.cells.length; i++) {
                 if (this.cells[i].number == 6 || this.cells[i].number == 9) {
                     if (this.show69Dot) {
