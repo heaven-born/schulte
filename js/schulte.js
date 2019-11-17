@@ -558,6 +558,17 @@ vueApp = new Vue({
                 }
             }
         },
+        soundOnTap: function () {
+            for (var i = 0; i < this.cells.length; i++) {
+                if (this.cells[i].number == 6 || this.cells[i].number == 9) {
+                    if (this.show69Dot) {
+                        this.cells[i].symbol = this.cells[i].number + '.';
+                    } else {
+                        this.cells[i].symbol = this.cells[i].number;
+                    }
+                }
+            }
+        },
         startMouseTracking: function () {
             this.mouseMoves.length = 0;
             this.mouseClicks.length = 0;
