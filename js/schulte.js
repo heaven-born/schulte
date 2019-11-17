@@ -88,8 +88,8 @@ var appData = {
 
     dialogShowed: false,
     settingsTabVisible: true,
-    statsTabVisible: false,
-    mousemapTabVisible: true,
+    statsTabVisible: true,
+    mousemapTabVisible: false,
 
     stats: {
         startTime: new Date(),
