@@ -53,7 +53,7 @@ var appData = {
     divergentCount: false,
     variousCounts: false,
     timerMode: false,
-    timerMinutes: 5,
+    timerMinutes: 500,
     currGroup: 0,
     groups: [], // array of Group: setups in makeGridCells() method
 
