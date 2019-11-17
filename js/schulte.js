@@ -82,7 +82,7 @@ var appData = {
 
     rowHeight: '20%',
     colWidth: '20%',
-    selectTimeOut: 500,
+    selectTimeOut: 5,
     selectedTimerId: -1,
     gameTimerId: -1,
 
